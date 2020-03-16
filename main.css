@@ -29,12 +29,13 @@
   text-align: center;
   overflow-y: scroll;
   outline: none;
+  border: 0px;
 }
 
 #boxSavedTexts {
   position: absolute;
-  height: 85vh;
-  top: 15vh;
+  height: 80%;
+  top: 20%;
   padding-top: 10px;
   width: 100%;
   overflow-y: scroll;
@@ -49,29 +50,54 @@
   color: red;
 }
 
-#boxControlPanel {
-  width: 50%;
+#boxControlPanel, #boxSaveButtons {
+  width: 90%;
   height: 2rem;
-  position: absolute;
+  margin: auto;
   left: 25%;
-  top: 109px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+@media screen and (min-width: 1000px) {
+  #boxControlPanel, #boxSaveButtons {
+    width: 50%;
+  }
 }
 
-.boxControl {
-  background-color: #e2e2e2;
+.btn {
+  cursor: pointer;
+}
+
+#boxSaveButtons {
+  margin-top: 5px;
+}
+#boxSaveButtons .btn {
   font-family: helvetica;
-  font-size: 0.65rem;
+  width: 150px;
+  background-color: #c2979d;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
-  padding-left: 15px;
-  margin-right: 5px;
-  padding-right: 15px;
+  margin: 0 calc(5px/2);
+}
+#boxSaveButtons .btn .label {
+  font-size: 10px;
+}
+
+.boxControl {
+  background-color: #e2e2e2;
+  font-family: helvetica;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: calc(5px*0.5);
+  margin-left: calc(5px*0.5);
   flex: 1;
   transition: 0.3s all;
   cursor: pointer;

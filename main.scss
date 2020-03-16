@@ -1,4 +1,9 @@
-
+$space-0: 5px;
+$space-1: calc(#{$space-0}*2);
+$space-2: calc(#{$space-0}*3);
+$space-3: calc(#{$space-0}*4);
+$space-4: calc(#{$space-0}*5);
+$space-5: calc(#{$space-0}*6);
 
 *{
     box-sizing: border-box;
@@ -8,12 +13,8 @@
 }
 
 #boxMain{
-    // background-color: lightblue;
     width: 100vw;
     height: 100vh;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     position: relative;
 }
 
@@ -44,19 +45,16 @@
     text-align: center;
     overflow-y: scroll;
     outline: none;
+    border: 0px;
 }
 
 #boxSavedTexts{
 
     position: absolute;
-    // z-index: -5;
-    height: 85vh;
-    top: 15vh;
+    height: 80%;
+    top: 20%;
     padding-top: 10px;
-    
     width: 100%;
-    // left: 25%;
-    // background-color: lightgoldenrodyellow;
     overflow-y: scroll;
 
 }
@@ -64,7 +62,7 @@
 .boxSavedText{
     text-align: center;
     // background-color: red;
-    line-height: 5px;
+    line-height: $space-0;
     transition: 0.3s all;
 
     &:hover{
@@ -74,32 +72,61 @@
 
 
 
-#boxControlPanel{
+#boxControlPanel, #boxSaveButtons{
     // background-color: pink;
-    width: 50%;
+    width: 90%;
     height: 2rem;
-    position: absolute;
+    margin:auto;
     left: 25%;
-    top: 109px;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 
+    @media screen and (min-width: 1000px){
+        width: 50%;
+    }
+
+}
+
+.btn{
+    cursor: pointer;
+}
+
+#boxSaveButtons{
+    margin-top: $space-0;
+
+    .btn{
+
+        font-family: helvetica;
+        width: 150px;
+        background-color: rgb(194, 151, 157);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: $space-0;
+        margin: 0 calc(#{$space-0}/2);
+
+        .label{
+            font-size: 10px;
+        }
+    }
 }
 
 .boxControl{
     background-color: #e2e2e2;
     font-family: helvetica;
-    font-size: 0.65rem;
+    font-size: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 5px;
-    padding-left: 15px;
-    margin-right: 5px;
-    padding-right: 15px;
+    border-radius: $space-0;
+    // padding-left: $space-3;
+    margin-right: calc(#{$space-0}*0.5);
+    margin-left: calc(#{$space-0}*0.5);
+    // padding-right: $space-3;
     flex:1;
     transition: 0.3s all;
     cursor: pointer;

@@ -33,6 +33,12 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 
-<script src="main.js"></script>
+
+
+<script src="js/dom-to-image.js"></script>
+<script src="js/file-saver.js"></script>
+<script src="js/main.js"></script>
+
+
 
 </html>
