@@ -17,7 +17,8 @@
     </div>
 
     <div id="boxActiveText">
-            <input placeholder="Type in this box to start your drawing. Try using symbols and clicking the controls!" id="mainInput" value=""></input>
+        <div id="boxMainInput">
+            <input placeholder="Type here to create your drawing." id="mainInput" value=""></input>
         </div>
     </div>
 

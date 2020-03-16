@@ -26,13 +26,13 @@ function coinToss(){
 var boxesControl = $(".boxControl");
 
 function flipSwitch(target){
-  console.log("flipping a switch");
-  console.log($(this));
+  // console.log("flipping a switch");
+  // console.log($(this));
 }
 
 boxesControl.on("click", function(){
 
-  console.log("controller clicked");
+  // console.log("controller clicked");
   var controlQuery = "state_" + $(this).attr("data-control-type");
   randomizerControls[controlQuery] = !randomizerControls[controlQuery];
   colorizeControls();
@@ -86,7 +86,7 @@ var yOffset = $(window).height()/6;
     
     // populate with input content
     var inputValue = $(this).val();
-    console.log(inputValue);
+    // console.log(inputValue);
 
     // these vars are unused
     var currentX = newText.offset().left;
@@ -148,8 +148,6 @@ $el.css({
 
 function colorizeControls(){
 
-    console.log("colorizing controls");
-
     $.each(boxesControl, function(){
 
       var controlQuery = "state_"+$(this).attr("data-control-type");
@@ -157,15 +155,15 @@ function colorizeControls(){
   
       if(randomizerControls[controlQuery] == 1){
         
-      console.log("active");
-      console.log($(this).css("background-color"));
+      // console.log("active");
+      // console.log($(this).css("background-color"));
       $(this).css("background-color", "#C8FCCD");
       return;
   
         } else 
       
-      console.log("inactive");
-      console.log($(this).css("background-color"));
+      // console.log("inactive");
+      // console.log($(this).css("background-color"));
       $(this).css("background-color", "#F5B6BB");
   
     }); // end of $.each
@@ -176,8 +174,3 @@ $(document).ready(function() {
   // console.log( "ready!" );
   colorizeControls();
 });
-
-
-
- 
-
