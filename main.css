@@ -71,11 +71,12 @@
 
 #boxSaveButtons {
   margin-top: 5px;
+  display: none;
 }
 #boxSaveButtons .btn {
   font-family: helvetica;
   width: 150px;
-  background-color: #c2979d;
+  background-color: #eeeeee;
   text-align: center;
   display: flex;
   flex-direction: column;

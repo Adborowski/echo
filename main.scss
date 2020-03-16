@@ -73,7 +73,6 @@ $space-5: calc(#{$space-0}*6);
 
 
 #boxControlPanel, #boxSaveButtons{
-    // background-color: pink;
     width: 90%;
     height: 2rem;
     margin:auto;
@@ -96,11 +95,14 @@ $space-5: calc(#{$space-0}*6);
 #boxSaveButtons{
     margin-top: $space-0;
 
+    // suspending the work for now - hiding the panel
+    display:none;
+
     .btn{
 
         font-family: helvetica;
         width: 150px;
-        background-color: rgb(194, 151, 157);
+        background-color: #eeeeee;
         text-align: center;
         display: flex;
         flex-direction: column;

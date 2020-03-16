@@ -14,10 +14,35 @@ $("#btn-save-png").on("click", function(){
 
   domtoimage.toBlob(node)
     .then(function (blob) {
-        window.saveAs(blob, 'my-node.png');
+        window.saveAs(blob, 'echo.png');
     });
 
 });
+
+$("#btn-save-svg").on("click", function(){
+
+  console.log("saving SVG");
+
+  function filter (node) {
+    return (node.tagName !== 'i');
+}
+
+domtoimage.toSvg(document.getElementById('boxSavedTexts'), {filter: filter})
+    .then(function (dataUrl) {
+        console.log(dataUrl);
+
+        var dl = document.createElement("a");
+        document.body.appendChild(dl); // This line makes it work in Firefox.
+        dl.setAttribute("href", dataUrl);
+        dl.setAttribute("download", "test.svg");
+        dl.click();
+
+    });
+
+
+});
+
+
 
 // work in progress, controls don't work yet
 var randomizerControls = {
